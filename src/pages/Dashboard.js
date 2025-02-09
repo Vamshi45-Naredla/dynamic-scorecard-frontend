@@ -13,9 +13,9 @@ const Dashboard = () => {
             const response = await getScores();
             console.log("Fetched scores:", response.data);
 
-            // Ensure the response structure matches
-            if (response.data && response.data.data) {
-                setScores(response.data.data); // Update the scores state
+            // Backend is returning an array directly
+            if (Array.isArray(response.data)) {
+                setScores(response.data); // Set the scores directly
             } else {
                 console.error("Unexpected response format:", response.data);
             }
