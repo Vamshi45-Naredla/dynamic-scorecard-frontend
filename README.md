@@ -1,1 +1,0 @@
-# dynamic-scorecard-frontend
